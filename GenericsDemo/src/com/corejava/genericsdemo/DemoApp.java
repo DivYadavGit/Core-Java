@@ -22,6 +22,7 @@ public class DemoApp
 		Demo demo = new Demo();
 		demo.setObj("Sample Text");
 		String str = (String) demo.getObj(); // Issue w/o generic need to cast explicitly.
-		System.out.println("Demo class for Issue w/o generics: " + str);
+		Integer i = (Integer) demo.getObj(); // It gives java.lang.ClassCastException: java.lang.String cannot be cast to java.lang.Integer
+		System.out.println("Demo class for Issue w/o generics: " + str + " convert into Integer: "+i);
 	}
 }
